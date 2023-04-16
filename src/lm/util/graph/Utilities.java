@@ -73,7 +73,9 @@ public class Utilities {
                 return curr;
             }
 
-            for(Node child: graph.adjacency_list.get(curr)){
+            List<Node> shuffeled_list = new ArrayList<>(graph.adjacency_list.get(curr));
+            Collections.shuffle(shuffeled_list);
+            for(Node child: shuffeled_list){
 
                 Node child_copy = child.copy();
                 

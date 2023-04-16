@@ -339,7 +339,7 @@ public class PathFinder extends JComponent
                     target.parrent = null;
                     start.parrent = null;
                     //found = (Cell) Utilities.depth_first_search(grid, start, target);
-                    found = (Cell) grid_handle.uniform_cost_search(start, target);
+                    found = (Cell) grid_handle.depth_first_search(start, target);
                 }
             }
 

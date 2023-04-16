@@ -62,4 +62,10 @@ public class Graph {
         }
         return null;
     }
+    public void clear_links(Node node, boolean orionted){
+        List<Node> list = new ArrayList<>(this.adjacency_list.get(node));
+        for(Node unbound: list){
+            remove_link(node, unbound, orionted);
+        }
+    }
 }
